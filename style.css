@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 40px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+main, html {
+  margin: 0;
+  padding: 0;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #27af5f;
+}
+
+label {
+  font-size: 20px;
+}
