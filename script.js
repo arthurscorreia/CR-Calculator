@@ -7,6 +7,11 @@ let materias = [];
             cargaHoraria = parseFloat(cargaHoraria);
             nota = parseFloat(nota);
 
+            if (isNaN(cargaHoraria) || isNaN(nota) || cargaHoraria <= 0 || nota < 0 || nota > 10) {
+                alert("Por favor, insira uma carga horária válida e uma nota entre 0 e 10.");
+                return;
+            }
+
             materias.push({ cargaHoraria, nota });
 
             let lista = document.getElementById("listaMaterias");
@@ -16,9 +21,15 @@ let materias = [];
 
             document.getElementById("cargaHoraria").value = "";
             document.getElementById("nota").value = "";
+
         }
 
         function calcularCR() {
+            if (materias.length === 0) {
+                document.getElementById("resultado").textContent = "Não é possível calcular o seu CR.";
+                return;
+            }
+            
             let somaNotasPonderadas = 0;
             let somaCargasHorarias = 0;
 
