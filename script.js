@@ -51,6 +51,7 @@ let materias = [];
     }
 
     function calcularCR() {
+        //caso não haja nenhuma matéria
         if (materias.length === 0) {
             document.getElementById("resultado").textContent = "Não é possível calcular o seu Coeficiente de Rendimento.";
             return;
@@ -64,13 +65,13 @@ let materias = [];
             somaCargasHorarias += materia.cargaHoraria;
         }
 
-        let CR = somaNotasPonderadas / somaCargasHorarias;
+        let CR = somaNotasPonderadas / somaCargasHorarias; //calcula o CR
         if (CR >= 5){
-            document.getElementById("resultado").style.color = "green";
+            document.getElementById("resultado").style.color = "green"; //se seu CR estiver acima da média (maior ou igual a 5.0), ele estará em verde
             document.getElementById("resultado").textContent = `O seu Coeficiente de Rendimento equivale a ${CR.toFixed(1)}`;
         }
         else {
-            document.getElementById("resultado").style.color = "red";
+            document.getElementById("resultado").style.color = "red"; //se seu CR estiver abaixo da média (menor que 5.0), ele estará em vermelho
             document.getElementById("resultado").textContent = `O seu Coeficiente de Rendimento equivale a ${CR.toFixed(1)}`;
         }
     }
