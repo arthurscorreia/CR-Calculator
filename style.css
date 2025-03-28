@@ -37,6 +37,7 @@ input {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box
 }
 
 .button {
@@ -66,6 +67,7 @@ input {
   margin-top: 20px;
 }
 
+/* Exibição do resultado */
 #resultado {
   font-size: 20px;
   font-weight: bold;
